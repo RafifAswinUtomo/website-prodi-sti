@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+    }
+
+    /* Fokus keyboard yang terlihat jelas (aksesibilitas) */
+    :focus-visible {
+        outline: 2px solid #fbbf24;
+        outline-offset: 2px;
+    }
+}
+
+@layer utilities {
+    /* Marquee berhenti saat kursor di atasnya */
+    .animate-marquee:hover {
+        animation-play-state: paused;
+    }
+
+    /* Efek scrollbar tipis untuk dropdown / drawer */
+    .scrollbar-slim::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+    .scrollbar-slim::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 9999px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
+}
