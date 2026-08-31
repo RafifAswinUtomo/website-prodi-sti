@@ -1,2 +1,5 @@
 *
 !.gitignore
+!ebooks
+ebooks/files/*.pdf
+ebooks/covers/*.jpg
