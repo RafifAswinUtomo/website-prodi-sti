@@ -26,9 +26,4 @@ Thumbs.db
 storage/app/public/ebooks/files/*.pdf
 storage/app/public/ebooks/covers/*.jpg
 
-/storage/framework/cache/
-/storage/framework/sessions/
-/storage/framework/testing/
-/storage/framework/views/
-
 drive-Berita & Kegiatan Prodi STI/
